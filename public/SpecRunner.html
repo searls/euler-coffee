@@ -8,19 +8,22 @@
   <script type="text/javascript" src="lib/jasmine-1.0.2/jasmine-html.js"></script>
 
   <!-- include source files here... -->
+  <script type="text/javascript" src="src/vendor/coffee-script.js"></script>
   <script type="text/javascript" src="src/vendor/underscore-min.js"></script>
-  <script type="text/javascript" src="src/reduces-urls.js"></script>
+  <script type="text/coffeescript" src="src/1_multiples.coffee"></script>
   
   <!-- include spec files here... -->
-  <script type="text/javascript" src="spec/spec-helper.js"></script>  
-  <script type="text/javascript" src="spec/reduces-urls-spec.js"></script>  
+  <script type="text/coffeescript" src="spec/spec-helper.coffee"></script>  
+  <script type="text/coffeescript" src="spec/1_multiples_spec.coffee"></script>  
 
 </head>
 <body>
 
 <script type="text/javascript">
-  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-  jasmine.getEnv().execute();
+  setTimeout(function() {
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+  },500);
 </script>
 
 </body>
